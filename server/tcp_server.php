@@ -6,7 +6,7 @@
  * Time: 上午1:06
  */
 
-$serv = new swoole_server('127.0.0.1',9501);
+$serv = new swoole_client('127.0.0.1',9501);
 
 $serv->set(
     [
@@ -32,3 +32,4 @@ $serv->on('close',function ($serv,$fd){
 
 //启动服务
 $serv->start();
+
